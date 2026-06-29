@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "agid-interop-vectors-v0.1",
+  "vectors": [
+    {
+      "id": "no-postcode-agid-to-zk-demo",
+      "postal": {
+        "schemaVersion": "postal-zone-v0.1",
+        "zoneId": "postal-zone:AE:agid-equivalent:demo",
+        "countryCode": "AE",
+        "zoneState": "postal_equivalent",
+        "generationMode": "generate_postal_equivalent",
+        "sourcePolicy": "agid-zone-source-policy-v1"
+      },
+      "ai": {
+        "schemaVersion": "address-ai-output-v0.1",
+        "task": "validation",
+        "decision": "allow",
+        "sourceBacked": true,
+        "amtState": "verified"
+      }
+    }
+  ]
+}
