@@ -8,6 +8,8 @@ The repository validates address structure, country model compatibility,
 postal-equivalent consistency, AGID / AOID reference shape, source confidence,
 and privacy-safe output status. It does not publish commercial connectors,
 private deployment code, UI experiments, or low-quality generated material.
+For grant and public-good review, read
+[`grant-readiness/adoption-readiness.md`](grant-readiness/adoption-readiness.md).
 
 ## Purpose
 
