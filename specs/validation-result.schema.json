@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://agid.example/schemas/address-validation-result-v0.1.json",
+  "title": "AGID Address Validation Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "status", "issues", "safePublicResult"],
+  "properties": {
+    "schemaVersion": { "const": "address-validation-result-v0.1" },
+    "status": {
+      "enum": ["verified", "partial", "manual_required", "rejected"]
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["code", "severity", "message"],
+        "properties": {
+          "code": { "type": "string", "minLength": 1 },
+          "severity": { "enum": ["info", "warning", "error", "blocked"] },
+          "message": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "safePublicResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["quality", "agidRef", "postalEquivalent", "manualReview"],
+      "properties": {
+        "quality": { "enum": ["verified", "partial", "manual_required", "rejected"] },
+        "agidRef": { "type": "string" },
+        "postalEquivalent": { "type": "boolean" },
+        "manualReview": { "type": "boolean" }
+      }
+    }
+  }
+}
+
